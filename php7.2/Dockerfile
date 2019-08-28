@@ -1,6 +1,5 @@
-FROM composer:1.8.4 as composer
-#FROM php:7.3.2-apache
-FROM php:7.2.15-apache
+FROM composer:1.9 as composer
+FROM php:7.2.21-apache
 
 ADD php-memory-limit.ini /usr/local/etc/php/conf.d/memory_limit.ini
 COPY --from=composer /usr/bin/composer /usr/bin/composer
@@ -13,13 +12,13 @@ RUN apt-get update && apt-get install -y \
         zlib1g-dev \
         libxml2-dev \
         libzip-dev \
-    && docker-php-ext-install -j$(nproc) iconv \
+        libonig-dev \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
-    && docker-php-ext-install pdo pdo_mysql mysqli zip json xml mbstring \
+    && docker-php-ext-install pdo_mysql mysqli zip \
     && docker-php-source delete
 
-RUN apt-get update && apt-get install -y nano zip unzip git iputils-ping net-tools acl mysql-client
+RUN apt-get update && apt-get install -y nano zip unzip git iputils-ping net-tools acl default-mysql-client
 
 EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
