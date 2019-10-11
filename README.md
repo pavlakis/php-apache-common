@@ -49,6 +49,14 @@ Available from: `pavlakis/php-apache-common:7.3.8`
 
 Available from: `pavlakis/php-apache-common:7.2.21`
 
+### PHP 7.1
+
+* PHP 7.1.27
+* composer 1.9
+* Apache 2.4.25 
+
+Available from: `pavlakis/php-apache-common:7.1.27`
+
 ## Confirming versions
 
 ```
