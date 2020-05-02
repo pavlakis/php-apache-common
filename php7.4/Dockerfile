@@ -1,5 +1,5 @@
-FROM composer:1.9 as composer
-FROM php:7.4.0beta4-apache
+FROM composer:1.10.5 as composer
+FROM php:7.4.5-apache
 
 ADD php-memory-limit.ini /usr/local/etc/php/conf.d/memory_limit.ini
 COPY --from=composer /usr/bin/composer /usr/bin/composer
