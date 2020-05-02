@@ -27,11 +27,11 @@ Tools:
 
 ### PHP 7.4
 
-* PHP 7.4.0beta4
-* composer 1.9
+* PHP 7.4.5
+* composer 1.10.5
 * Apache 2.4.38
 
-Available from: `pavlakis/php-apache-common:7.4.0beta4`
+Available from: `pavlakis/php-apache-common:7.4.5`
 
 ### PHP 7.3
 
