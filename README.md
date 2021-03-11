@@ -25,6 +25,14 @@ Tools:
 
 ## Latest Builds
 
+### PHP 8.0
+
+* PHP 8.0.3
+* composer 2.0.11
+* Apache 2.4.38
+
+Available from: `pavlakis/php-apache-common:8.0.3`
+
 ### PHP 7.4
 
 * PHP 7.4.5
